@@ -15,7 +15,7 @@ This repository contains a PyTorch implementation of a Convolutional Neural Netw
 ### Training the Model
 Clone the repository and run the training script:<br>
 ```
-python train.py
+python S5_Himank_Jain.ipynb
 
 ```
 ### Code Structure
