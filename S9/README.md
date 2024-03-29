@@ -25,9 +25,9 @@ The model architecture consists of several convolutional layers organized into d
 
 - Total parameters - 203,856
 - Total Epocs - 55
-- Training Accuracy: The training accuracy increases steadily with each epoch, reaching around 75.57% at the end of training.
+- Training Accuracy: The training accuracy increases steadily with each epoch, reaching around 76% at the end of training.
 - Training Loss: The training loss decreases consistently over epochs, indicating that the model is learning effectively from the training data.
-- Test Accuracy: The test accuracy also increases over epochs, reaching around 84.45% at the end of training.
+- Test Accuracy: The test accuracy also increases over epochs, reaching around 85% at the end of training.
 - Test Loss: The test loss decreases throughout training, indicating that the model generalizes well to unseen data.
 - Misclassifications: The misclassification rate could be further analyzed to identify patterns or classes that are particularly challenging for the model. The misclassified images, along with their predicted and true labels, could be examined to gain insights into areas for improvement.
 - Dilation and Depthwise Separable Convolution: The model architecture makes use of dilation and depthwise separable convolution to increase the receptive field and capture more contextual information from the input images. These techniques can help improve the model's performance, especially in tasks where capturing spatial dependencies is crucial.
