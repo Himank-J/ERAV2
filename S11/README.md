@@ -2,27 +2,6 @@
 
 This PyTorch project focuses on building and training a RESNET18 deep learning model on the CIFAR-10 dataset. It includes various features such as data augmentation using the Albumentations library, a custom dataset loader, plotting train and test loss curves, GradCam visualization of randomly sampled misclassified images, and visualization of misclassified images with labels and appropriate legends.
 
-## Getting Started
-
-Follow the steps below to get started with the project:
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/acharyasunil/cifar10_grad_cam.git
-   cd cifar10_grad_cam
-   ```
-
-2. Install the required packages:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Download and preprocess the CIFAR-10 dataset:
-
-   Before training the model, you need to download the CIFAR-10 dataset. You can use the `torchvision` library to download and preprocess the dataset. Apply data augmentation using Albumentations to increase the diversity of the training data.
-
 ## Training and Evaluation
 
 1. Train the Model:
@@ -33,7 +12,7 @@ Follow the steps below to get started with the project:
    python main.py
    ```
    OR
-   Run S11.ipynb in jupyter notebook.
+   Run main.ipynb in jupyter notebook.
 
 2. Evaluate the Model:
 
@@ -48,21 +27,18 @@ In this project, data augmentation is performed using the Albumentations library
 The project includes a custom dataset loader for CIFAR-10. The `CustomCIFAR10` class extends the PyTorch `Dataset` class and allows you to customize the data loading process.
 
 ## Loss Curve Visualization
-
-![Alt text](assets/train_loss.png)
-![Alt text](assets/test_loss.png)
+![image](https://github.com/Himank-J/ERAV2/assets/55919214/f7422aee-b601-4469-9a33-3db649286a20)
 
 
 ## Misclassified Image Visualization
-
-![Alt text](assets/misclassified.jpg)
+![image](https://github.com/Himank-J/ERAV2/assets/55919214/91dff9ad-011d-478f-9664-218529c8224f)
 
 
 ## GradCam Visualization of Misclassified Images
 
 GradCam is used to visualize the regions of interest in the misclassified images that contribute to the model's predictions. The `gradcam.py` script can be used to apply GradCam to randomly sampled misclassified images.
 
-![Alt text](assets/misclassified_grad_cam.jpg)
+![image](https://github.com/Himank-J/ERAV2/assets/55919214/825088ba-cb2d-4c3b-9db7-0080a69d1b26)
 
 
 ## Conclusion
