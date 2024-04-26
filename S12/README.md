@@ -14,6 +14,10 @@ Utilised Yolo model for custom training on identification of License plate from 
 
 <img width="706" alt="Screenshot 2024-04-26 at 11 48 25 AM" src="https://github.com/Himank-J/ERAV2/assets/55919214/0e2cc38b-59a1-4793-8ff3-7afaf29a1bb0">
 
+**Training Logs:**
+
+<img width="953" alt="Screenshot 2024-04-26 at 11 52 47 AM" src="https://github.com/Himank-J/ERAV2/assets/55919214/ef297694-d77b-4cfa-b370-6ae466f909c7">
+
 ## Results
 
 <img width="1220" alt="Screenshot 2024-04-26 at 11 49 16 AM" src="https://github.com/Himank-J/ERAV2/assets/55919214/11623315-de13-4977-81ae-7899d1fb122c">
