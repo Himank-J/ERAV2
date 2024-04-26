@@ -4,9 +4,9 @@ Utilised Yolo model for custom training on identification of License plate from 
 
 ## Dataset
 
-Total annotated images = 200
-Training samples = 180
-Test samples = 20
+- Total annotated images = 200
+- Training samples = 180
+- Test samples = 20
 
 ## Training 
 
