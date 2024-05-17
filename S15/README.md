@@ -9,9 +9,12 @@ However the same script can be used traing using custom dataset.
 
 1.) Firstly we will install labelme using python pip. Labelme is a graphical image annotation tool 
   * pip install labelme
+    
 2.) Load your image directory in labelme and get to annotating
+
 3.) Now once annotation is complete, install labelme2yolo to convert your labelme annotation to yolov9 format
   * labelme2yolo --json_dir /path/to/labelme_json_dir/ --val_size 0.15 --test_size 0.15
+    
 4.) Once done you can execute above script by replacing dataset with your custom path
 
 ## Training Performance
