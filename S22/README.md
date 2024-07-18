@@ -22,11 +22,12 @@
 ## Result
 
 1. Example of prediction using UNet 
-![results](./results/eg_UNet.png)
+![results](./results/unet_results.png)
 
 2. VAE
 
     A. MNIST --> Input image + 25 different iterations of wrong label
-![results](./results/VAE_MNIST.png)
+![results](./results/minst_vae_results.png)
+
     B. CIFAR10 --> Input image + 25 different iterations of wrong label
-![results](./results/VAE_CIFAR10.png)
+![results](./results/cifar_vae_results.png)
