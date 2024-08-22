@@ -1,49 +1,36 @@
-# 🌐 ERA1 Session 24 Assignment: Reinforcement Learning
+# Car Simulation using T3D (Twin Delayed Deep Detereministic Policy Gradient)
 
-## 📌 Table of Contents
-- Problem Statement
-- Introduction
-- Model Architecture
-- PyTorch Lightning Implementation
-- Training
-- Results
-- HuggingFace App
-- Gradio Interface
+## Objective
+Implementation of Car Simulation using T3D algorithm
 
-## 🎯 Problem Statement
-### Assignment 1:
-- Share a screenshot of you running the whole code on your computer. To make sure it is your computer, put your own photo as the wallpaper (important)  
-- You would need to find code for some files to run it successfully. You're of course going to find the files online and paste the code. 
-- Once you are done, understand the code you copied and write a pseudo-code to explain what is happening. You need to explain:  
-    - __init__  
-    - getQValue  
-    - computeValueFromQValue
-    - computeActionFromQValues
-    - getAction
-    - update
-- Write your pseudo-code on your S24 Assignment Submission page. For example, question you'll find is "Write a the pseudo-code (if you paste direct code, will be awarded 0) for __init__"
+## [Demo](https://youtu.be/pOXgpQtS0tA)
+
+https://github.com/user-attachments/assets/647cb964-2cf8-46f6-9339-880c5b2c334d
 
 
-### Assignment 2: 
+## Working
 
-1. Create a new map of some other city for the code shared above  
-2. Add a DNN with 1 more FC layer.  
-3. Your map must have 3 targets A1>A2>A3 and your car/robot/object must target these alternatively.  
-4. Train your best model upload a video on YouTube and share the URL  
-5. Answer these questions in S24-Assignment-Solution:  
-    1. What happens when "boundary-signal" is weak when compared to the last reward?  
-    2. What happens when Temperature is reduced?  
-    3. What is the effect of reducing (gamma) ?  
-6. Heavy marks for creativity, map quality, targets, and other things. If you use the same maps or have just replicated shared code, you will get 0 for this assignment and a -50% advance deduction for the next assignment.  
-
-## 📺 Video
-
-Youtube Link: https://www.youtube.com/watch?v=rBd4Obkx4OE
-
-## ⚡ Answer to questions  
-1. What happens when "boundary-signal" is weak when compared to the last reward?  
-    Answer: When the boundary-signal is weak relative to the last reward, the car tends to get stuck at the boundary. It struggles to return to the road or to reach its intended goal.
-
-2. Temperature - Car was movement what fluctuating very rapidly
-
-3. Gamma - Car was moving straight and getting fixed into loops.
+- Here our RL agent (car) learns to navigate from point to point using T3D (Twin Delayed Deep Detereministic Policy Gradient) - a reinforcement learning technique.
+- T3D here uses actor-critic models built on fully connected deep learning network.
+- There are 2 actors - an actor model & actor target
+- There are 4 critics - 2 critic models & 2 critic targets
+- Actor network predicts Q states based on which 3 actions are taken by the agent : move forward, turn left or turn right.
+- Car here navigates from 3 points.
+- The red point is the starting point.
+- We move from red point to green point followed by blue point and finally coming back to our starting red point
+- This loop will continue and car will keep hopping from one point to another.
+- During its travel car is guided by living penalties and rewards.
+- Penalties are punishments given to car for an undesired motion.
+- Rewards are incentives given when it takes a right action.
+- Penalties in this car are for straying out of road, roaming too close to the wall (boundaries of video frame).
+- Rewards given are for travelling through road and travelling towards the target set.
+  
+## Files Structure
+- ai.py -> This has the deep learning network (T3D, actor & critic)
+- map.py -> Main file from which ai.py is called and rewards/penalties are awarded
+- car.kv -> Kivy file for setting up car
+- images -> This has the images
+    - citymap.png -> This is the map which is shown in display
+    - MASK1.png -> This is the black and white map with black areas as lanes
+    - mask.png -> Opengl needs different coordinates. This is the same MASK1.png transformed by rotating to the right by 90 degrees
+- T3D_implementation.ipynb -> This is a reference colab file that is helpful to understand how T3D works using "AntBulletEnv-v0" environment in gym==0.22 & pybullet
