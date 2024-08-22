@@ -1,4 +1,4 @@
-# Session 20 - ERA Phase I - Assignment
+# Stable Diffusion
 
 ---
 
